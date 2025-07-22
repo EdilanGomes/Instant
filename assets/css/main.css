@@ -61,58 +61,6 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 
-.rain-effect-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100; /* Garante que fique atrás de tudo */
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; /* Não bloqueia cliques */
-  opacity: 0.08; /* Controle de transparência: ajuste para mais/menos visível */
-  --c: #09f;
-  background-color: #000;
-  background-image:
-    radial-gradient(4px 100px at 0px 235px, var(--c), #0000),
-    radial-gradient(4px 100px at 300px 235px, var(--c), #0000),
-    radial-gradient(1.5px 1.5px at 150px 117.5px, var(--c) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 252px, var(--c), #0000),
-    radial-gradient(4px 100px at 300px 252px, var(--c), #0000),
-    radial-gradient(1.5px 1.5px at 150px 126px, var(--c) 100%, #0000 150%);
-  background-size:
-    300px 235px,
-    300px 235px,
-    300px 235px,
-    300px 252px,
-    300px 252px,
-    300px 252px;
-  animation: rainMove 150s linear infinite;
-  backdrop-filter: blur(1em) brightness(6);
-}
-
-/* Animação */
-@keyframes rainMove {
-  0% {
-    background-position:
-      0px 220px,
-      3px 220px,
-      151.5px 337.5px,
-      25px 24px,
-      28px 24px,
-      176.5px 150px;
-  }
-  to {
-    background-position:
-      0px 6800px,
-      3px 6800px,
-      151.5px 6917.5px,
-      25px 13632px,
-      28px 13632px,
-      176.5px 13758px;
-  }
-}
-
-
 body {
   color: var(--default-color);
   background-color: var(--background-color);
